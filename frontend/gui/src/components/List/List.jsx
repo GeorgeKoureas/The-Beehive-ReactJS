@@ -1,5 +1,6 @@
 import React from 'react'
-import { List, Card } from 'antd'
+import { List } from 'antd'
+import CustomCard  from '../Card/Card'
 
 
 
@@ -26,7 +27,7 @@ const Competition = (props) => {
                 dataSource={data}
                 renderItem={item => (
                 <List.Item>
-                    <Card title={item.title}>Card content</Card>
+                    <CustomCard title={item.title}>Card content</CustomCard>
                 </List.Item>
                 )}
             />
