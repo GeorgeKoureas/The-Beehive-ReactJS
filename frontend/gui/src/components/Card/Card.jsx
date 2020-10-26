@@ -6,6 +6,9 @@ const { Meta } = Card;
 
 
 class CustomCard extends React.Component {
+
+
+
     render (){
         return (
             <Card
@@ -24,7 +27,7 @@ class CustomCard extends React.Component {
             >
                 <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                title="Card title"
+                title = {this.title}
                 description="This is the description"
                 />
             </Card>
