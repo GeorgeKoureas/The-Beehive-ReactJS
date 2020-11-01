@@ -11,12 +11,13 @@ class CustomCard extends React.Component {
 
     render (){
         return (
+            
             <Card
                 style={{ width: 300 }}
                 cover={
                 <img
                     alt="example"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                    src={this.props.img}
                 />
                 }
                 actions={[
@@ -27,8 +28,8 @@ class CustomCard extends React.Component {
             >
                 <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                title = {this.title}
-                description="This is the description"
+                title = {this.props.title}
+                description={this.props.description}
                 />
             </Card>
         )
