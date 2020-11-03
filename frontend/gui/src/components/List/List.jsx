@@ -18,11 +18,15 @@ class CompetitionList extends React.Component{
       axios.get('http://127.0.01.:8000/api/')
         .then(res => {
           this.setState({
-            competitions: res.data,
-            isloading: true,   //FIX THE LOADING ANIMATION TO CUT AFTER DATA IS FETCHED
+            competitions: res.data,   //FIX THE LOADING ANIMATION TO CUT AFTER DATA IS FETCHED
           })
           console.log(res.data);
         })
+        .then(setTimeout(() => {
+          this.setState({
+          isloading: false,
+        })
+      }, 1000))
     }
 
 
