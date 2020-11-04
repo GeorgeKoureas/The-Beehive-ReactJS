@@ -1,17 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom'
+import BaseRouter from './routes'
 import 'antd/dist/antd.css';
 
 import CustomLayout from './components/Layout/Layout.jsx'
-import CompetitionList from './components/List/List'
 
 
 function App() {
   return (
     <div className="App">
-      <CustomLayout>
-        <CompetitionList />
-      </CustomLayout>
+      <BrowserRouter>
+        <CustomLayout>
+          <BaseRouter />
+        </CustomLayout>
+      </BrowserRouter>
     </div>
   );
 }
