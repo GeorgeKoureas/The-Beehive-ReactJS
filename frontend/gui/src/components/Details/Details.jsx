@@ -18,7 +18,7 @@ class CompetitionDetails extends React.Component{
         axios.get(`http://127.0.01.:8000/api/${competitionID}`)
         .then(res => {
             this.setState({
-            competition: res.data,   //FIX THE LOADING ANIMATION TO CUT AFTER DATA IS FETCHED
+            comp: res.data,   //FIX THE LOADING ANIMATION TO CUT AFTER DATA IS FETCHED
             })
             console.log(res.data);
         })
@@ -28,8 +28,7 @@ class CompetitionDetails extends React.Component{
 
         // const competitions = this.state.competitions.map(competition => <CustomCard key={competition.id} title={competition.name} description={competition.description_small} img={competition.cover_image}/>)
         return (
-            <CustomCard title={this.state.comp.name} />
-         
+            <CustomCard title={this.state.comp.name} ></CustomCard>
         )
     }
 }

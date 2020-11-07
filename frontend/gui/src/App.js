@@ -1,20 +1,19 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
 import BaseRouter from './routes'
 import 'antd/dist/antd.css';
-
 import CustomLayout from './components/Layout/Layout.jsx'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <CustomLayout>
-          <BaseRouter />
-        </CustomLayout>
-      </BrowserRouter>
-    </div>
+    <Router>
+      <div className="App">
+          <CustomLayout>
+            <BaseRouter />
+          </CustomLayout>
+      </div>
+    </Router>
   );
 }
 

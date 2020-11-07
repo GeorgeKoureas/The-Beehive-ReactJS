@@ -24,7 +24,7 @@ class CustomLayout extends React.Component{
                     <Breadcrumb.Item>List</Breadcrumb.Item>
                     <Breadcrumb.Item>App</Breadcrumb.Item>
                     </Breadcrumb>
-                    <div className={cx(styles.sitelayoutcontent)}><CompetitionList/></div>
+                    <div className={cx(styles.sitelayoutcontent)}>{this.props.children}</div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
             </Layout>

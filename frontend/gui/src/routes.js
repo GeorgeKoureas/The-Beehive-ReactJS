@@ -7,7 +7,7 @@ import CompetitionDetails from './components/Details/Details'
 const BaseRouter = () => (
     <div>
         <Route exact path='/' component= {CompetitionList} />
-        <Route exact path='/:ID' component= {CompetitionDetails} />
+        <Route exact path='/:competitionID' component= {CompetitionDetails} />
     </div>
 
 )
