@@ -2,7 +2,7 @@ import React from 'react';
 import BaseRouter from './routes'
 import 'antd/dist/antd.css';
 import CustomLayout from './components/Layout/Layout.jsx'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 
 function App() {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row, Col } from 'antd';
 import axios from 'axios'
 import CustomCard  from '../Card/Card'
 
@@ -25,10 +26,13 @@ class CompetitionDetails extends React.Component{
     }
 
     render(){
-
         // const competitions = this.state.competitions.map(competition => <CustomCard key={competition.id} title={competition.name} description={competition.description_small} img={competition.cover_image}/>)
         return (
-            <CustomCard title={this.state.comp.name} ></CustomCard>
+            <Row>
+                <Col span={16}></Col>
+                <Col span={8}><CustomCard title={this.state.comp.name} description={this.state.comp.description_large} img={this.state.comp.cover_image} ></CustomCard></Col>
+            </Row>
+            // <CustomCard title={this.state.comp.name} description={this.state.comp.description_large} img={this.state.comp.cover_image} ></CustomCard>
         )
     }
 }

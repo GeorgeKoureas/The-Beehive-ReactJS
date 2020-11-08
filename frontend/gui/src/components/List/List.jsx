@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import { List } from 'antd'
+import { List, Row } from 'antd'
 import CustomCard  from '../Card/Card'
+import { Link } from 'react-router-dom'
 
 
 
@@ -37,11 +38,13 @@ class CompetitionList extends React.Component{
 
         return (
           <List
-          grid={{ gutter: 16, column: 4 }}
+          grid={{ gutter: 20, column: 4, }}
           dataSource={this.state.competitions}
-          renderItem={item => (
+          renderItem={item => (  
           <List.Item>
+            <Link to={`/${item.id}`}>
             <CustomCard title={item.name} description={item.description_small} img={item.cover_image} loading={this.state.isloading}></CustomCard>
+            </Link>
           </List.Item>
           )}
       />
